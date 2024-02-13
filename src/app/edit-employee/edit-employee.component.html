@@ -1,0 +1,38 @@
+<div class="container my-5">
+    <h1 class="mb-3">Edit an Existing employee</h1>
+
+    <div class="row">
+      <div class="col-6">
+        <form #form="ngForm" (ngSubmit)="updateEmployee()">
+            <div class="form-group">
+                <label for="exampleInputid">ID</label>
+                <input type="text-field" class="form-control" id="exampleInputid" readonly name="id" [(ngModel)]="employeeDetails.id" placeholder="Enter your full name">   
+              </div>
+            <div class="form-group">
+            <label for="exampleInputName">Name</label>
+            <input type="text-field" class="form-control" id="exampleInputName" name="name" [(ngModel)]="employeeDetails.name" placeholder="Enter your full name">   
+          </div>
+          <div class="form-group">
+            <label for="exampleInputemail">Email</label>
+            <input type="email" class="form-control" id="exampleInputemail" name="email" [(ngModel)]="employeeDetails.email" placeholder="Enter your email here">
+          </div>
+          <div class="form-group">
+              <label for="exampleInputPhone">Phone</label>
+              <input type="number" class="form-control" id="exampleInputPhone" name="phone" [(ngModel)]="employeeDetails.phone"  placeholder="Enter your Phone Number">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputSalary">Salary</label>
+              <input type="number" class="form-control" id="exampleInputSalary" name="salary" [(ngModel)]="employeeDetails.salary" placeholder="Enter you current Salary">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputdepartment">Department</label>
+              <input type="text" class="form-control" id="exampleInputdepartment" name="department" [(ngModel)]="employeeDetails.department" placeholder="Enter your department">
+            </div>
+          <button type="submit" name="button" class="btn btn-primary mr-5">Edit</button>
+          <button type="button" name="button" class="btn btn-danger" (click)="deleteEmployee(employeeDetails.id)">Delete</button>
+          
+        </form>
+
+      </div>
+    </div>
+  </div>        
